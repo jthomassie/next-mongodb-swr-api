@@ -1,10 +1,8 @@
 // components/Map.js
-// https://github.com/mapbox/mapbox-react-examples
-// https://dev.to/niharikak101/integrating-mapbox-with-next-js-the-cheaper-alternative-to-google-maps-g39
 
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
-import _, { map } from "lodash";
+// import _, { map } from "lodash";
 import * as turf from "@turf/turf";
 
 // const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
