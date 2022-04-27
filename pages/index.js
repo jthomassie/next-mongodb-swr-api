@@ -9,7 +9,7 @@ const fetcher = async (url) =>
 
 const Features = () => {
   // swr
-  const address = "http://localhost:3000/api/features";
+  const address = "/api/features";
   const { data, error } = useSWR(address, fetcher, {
     revalidateOnFocus: false,
   });

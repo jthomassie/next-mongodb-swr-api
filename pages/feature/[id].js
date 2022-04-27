@@ -11,9 +11,7 @@ export default function Feature() {
   // swr
   const router = useRouter();
   const { data, error } = useSWR(
-    router.query.id
-      ? `http://localhost:3000/api/feature/${router.query.id}`
-      : null,
+    router.query.id ? `/api/feature/${router.query.id}` : null,
     fetcher
   );
 

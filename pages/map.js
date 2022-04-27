@@ -9,7 +9,7 @@ const fetcher = async (url) =>
 
 const MapApp = () => {
   // swr
-  const address = "http://localhost:3000/api/inregion";
+  const address = "/api/inregion";
   const { data, error } = useSWR(address, fetcher, {
     revalidateOnFocus: false,
   });
