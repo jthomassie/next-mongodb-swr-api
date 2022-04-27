@@ -29,8 +29,8 @@ yarn dev
 
 View in your browser:
 
-- [http://localhost:3000/features](http://localhost:3000/features) - open a page in your browser
-- [http://localhost:3000/api/features](http://localhost:3000/api/features) - access the page's endpoint
+- [http://localhost:3000](http://localhost:3000) - open a page in your browser
+- [http://localhost:3000/api/features](http://localhost:3000/api/features) - access that page's endpoint
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
