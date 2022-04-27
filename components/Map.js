@@ -25,16 +25,6 @@ const Map = ({ mapdata }) => {
   //
   const mapContainerRef = useRef(null);
 
-  //
-  let layer = {
-    features: {
-      geo: mapData,
-      id: "",
-      nm: "features",
-      color: "red",
-    },
-  };
-
   // props to html for popup
   const propsToHtml = (props) => {
     let keys = _.keys(props);
@@ -88,6 +78,16 @@ const Map = ({ mapdata }) => {
 
   // init map on component mount
   useEffect(() => {
+    //
+    let layer = {
+      features: {
+        geo: mapData,
+        id: "",
+        nm: "features",
+        color: "red",
+      },
+    };
+
     // new map
     const map = new mapboxgl.Map({
       container: mapContainerRef.current,
@@ -241,7 +241,7 @@ const Map = ({ mapdata }) => {
     if (!map) {
       return;
     }
-    setMapdata(mapData);
+    setMapdata(...mapData);
     map.getSource("features").setData(mapdata);
     // map.resize();
     let bbox = turf.bbox(mapdata);
