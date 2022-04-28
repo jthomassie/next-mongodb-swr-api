@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
-// import _, { map } from "lodash";
+import _ from "lodash";
 import * as turf from "@turf/turf";
 
 // const MAPBOX_ACCESS_TOKEN = process.env.MAPBOX_ACCESS_TOKEN;
@@ -241,10 +241,8 @@ const Map = ({ mapdata }) => {
     }
     setMapdata(mapData);
     map.getSource("features").setData(mapdata);
-    // map.resize();
+    // zoom to features bounds
     let bbox = turf.bbox(mapdata);
-    console.log(bbox);
-    //
     map.fitBounds(bbox, {
       padding: 30,
       speed: 0.5,

@@ -11,7 +11,7 @@ const MapApp = () => {
   // swr
   const address = "/api/inregion";
   const { data, error } = useSWR(address, fetcher, {
-    revalidateOnFocus: false,
+    revalidateOnFocus: true,
   });
 
   //
