@@ -1,6 +1,11 @@
 module.exports = {
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
+  resolve: {
+    fallback: {
+      net: false,
+    },
   },
+  // eslint: {
+  //   ignoreDuringBuilds: true,
+  // },
 };
