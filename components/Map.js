@@ -239,7 +239,7 @@ const Map = ({ mapdata }) => {
     if (!map) {
       return;
     }
-    setMapdata(...mapData);
+    setMapdata(mapData);
     map.getSource("features").setData(mapdata);
     // map.resize();
     let bbox = turf.bbox(mapdata);
