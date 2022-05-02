@@ -17,6 +17,8 @@ const MapApp = () => {
   //
   if (error) <h1>Loading failed...</h1>;
   if (!data) <h1>Loading...</h1>;
+
+  //
   let mapdata = {
     type: "FeatureCollection",
     features: data,
